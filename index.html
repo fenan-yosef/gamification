@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rate to get paid</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Logo</div>
+        <div class="reward-div">
+          <div class="reward-container">
+            <i class="fa-solid fa-wallet fa-lg" style="color: #ffffff"></i>
+            <span id="balance"> $234.00</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr />
+    <section>
+      <div class="container">
+        <div class="image-viewport">
+          <img
+            id="current-image"
+            src="./assets/images/image-1.jpg"
+            alt="Current Image"
+          />
+          <img
+            id="next-image"
+            src="image2.jpg"
+            alt="Next Image"
+            class="hidden"
+          />
+        </div>
+        <div class="rating-buttons">
+          <button onclick="rateImage('worst')" class="worst">
+            <i class="far fa-frown"></i>
+          </button>
+          <button onclick="rateImage('bad')" class="bad">
+            <i class="far fa-meh"></i>
+          </button>
+          <button onclick="rateImage('neutral')" class="neutral">
+            <i class="far fa-meh-blank"></i>
+          </button>
+          <button onclick="rateImage('good')" class="good">
+            <i class="far fa-smile"></i>
+          </button>
+          <button onclick="rateImage('best')" class="best">
+            <i class="far fa-laugh-beam"></i>
+          </button>
+        </div>
+      </div>
+      <div class="navbar-div">
+        <nav class="bottom-nav">
+          <button class="nav-button active" onclick="showSection('home')">
+            <i class="fas fa-home"></i> Home
+          </button>
+          <button class="nav-button" onclick="showSection('withdraw')">
+            <i class="fas fa-wallet"></i> Withdraw
+          </button>
+          <button class="nav-button" onclick="showSection('tasks')">
+            <i class="fas fa-tasks"></i> Tasks
+          </button>
+          <button class="nav-button" onclick="showSection('settings')">
+            <i class="fas fa-cog"></i> Settings
+          </button>
+          <button class="nav-button" onclick="showSection('profile')">
+            <i class="fas fa-user"></i> Profile
+          </button>
+        </nav>
+      </div>
+    </section>
+    <script src="script.js"></script>
+    <!-- <div class="what-do-you-give-nike-sneakers">
+      What do you give Nike sneakers?
+    </div> -->
+  </body>
+</html>
