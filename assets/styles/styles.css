@@ -14,7 +14,7 @@ body {
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-image: url("/assets/images/ae91cc92-c5b4-4ff4-aa06-c86b8b7564ef.jpg");
+  background-image: url("./assets/images/ae91cc92-c5b4-4ff4-aa06-c86b8b7564ef.jpg");
 }
 
 nav {
