@@ -39,6 +39,7 @@ nav {
   font-family: "Playwrite BE VLG";
   font-weight: 900;
   font-size: 4vh;
+  cursor: pointer;
 }
 
 .reward-container {
