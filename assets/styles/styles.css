@@ -199,82 +199,24 @@ section {
   color: #000000;
 }
 
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding-top: 60px;
+/* fire works */
+
+.firework {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  animation: explode 1s ease-out forwards;
 }
 
-.modal-content {
-  text-align: center;
-  font-family: "poppins";
-  background-color: #2a8397;
-  margin: 5% auto;
-  padding: 20px;
-  border: 1px solid #ffffff;
-  width: 80%;
-  height: 200px;
-  border-radius: 10px;
-}
-
-select {
-  background-color: #177c93;
-  padding: 5px 10px;
-  border-radius: 10px;
-}
-
-.withdraw-button {
-  background-color: #1b6b6c;
-  border: none;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 0 10px;
-}
-
-.withdraw-button:hover,
-.withdraw-button:active {
-  background-color: #388e3c;
-  transition: all 0.5s ease-in-out;
-  box-shadow: 0px 5px 15px rgb(66, 66, 66);
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.back {
-  color: #aaa;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.back:hover,
-.back:focus {
-  color: black;
-  text-decoration: none;
-}
-
-.hidden {
-  display: none;
+@keyframes explode {
+  from {
+    opacity: 1;
+    transform: scale(0.5) translate(-50%, -50%);
+  }
+  to {
+    opacity: 0;
+    transform: scale(3) translate(-50%, -50%);
+  }
 }

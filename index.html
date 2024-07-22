@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="./assets/styles/spinner.css" />
+    <link rel="stylesheet" href="./assets/styles/withdraw-modals.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -32,7 +34,7 @@
     </header>
     <hr />
     <section>
-      <div class="container">
+      <div class="container" id="firework-container">
         <div class="image-viewport">
           <img id="current-image" alt="Current Image" />
           <img id="next-image" alt="Next Image" class="hidden" />
@@ -46,19 +48,22 @@
           What would you rate <span class="question" id="next-item"></span>?
         </div>
         <div class="rating-buttons">
-          <button onclick="rateImage('worst')" class="worst">
+          <button onclick="rateImage('worst')" class="worst firework-button">
             <i class="far fa-frown"></i>
           </button>
-          <button onclick="rateImage('bad')" class="bad">
+          <button onclick="rateImage('bad')" class="bad firework-button">
             <i class="far fa-meh"></i>
           </button>
-          <button onclick="rateImage('neutral')" class="neutral">
+          <button
+            onclick="rateImage('neutral')"
+            class="neutral firework-button"
+          >
             <i class="far fa-meh-blank"></i>
           </button>
-          <button onclick="rateImage('good')" class="good">
+          <button onclick="rateImage('good')" class="good firework-button">
             <i class="far fa-smile"></i>
           </button>
-          <button onclick="rateImage('best')" class="best">
+          <button onclick="rateImage('best')" class="best firework-button">
             <i class="far fa-laugh-beam"></i>
           </button>
         </div>
@@ -91,7 +96,7 @@
         <span class="back hidden" onclick="goBack()">&#8592; Back</span>
         <div id="withdrawalStep1">
           <h2>Congratulations!</h2>
-          <p>You can now withdraw your money.</p>
+          <p>You can now withdraw your <span id="money-amount">money.</span></p>
           <p>Please choose where you want to withdraw:</p>
           <select id="withdrawalOptions">
             <option value="paypal">PayPal</option>
@@ -111,6 +116,92 @@
             Complete Registration
           </button>
         </div>
+      </div>
+    </div>
+
+    <!-- modal for spinner -->
+    <div class="spinner-modal" id="spinner-modal">
+      <div class="spinner-modal-content">
+        <div class="wheel-container">
+          <div class="wheel" id="wheel">
+            <div
+              class="segment"
+              style="transform: rotate(0deg); background-color: #f94144"
+            >
+              <i class="fas fa-gem"></i> Prize 1
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(36deg); background-color: #f3722c"
+            >
+              <i class="fas fa-gift"></i> Prize 2
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(72deg); background-color: #f8961e"
+            >
+              <i class="fas fa-car"></i> Prize 3
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(108deg); background-color: #f9c74f"
+            >
+              <i class="fas fa-coins"></i> Prize 4
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(144deg); background-color: #90be6d"
+            >
+              <i class="fas fa-plane"></i> Prize 5
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(180deg); background-color: #43aa8b"
+            >
+              <i class="fas fa-home"></i> Prize 6
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(216deg); background-color: #4d908e"
+            >
+              <i class="fas fa-tv"></i> Prize 7
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(252deg); background-color: #577590"
+            >
+              <i class="fas fa-camera"></i> Prize 8
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(288deg); background-color: #277da1"
+            >
+              <i class="fas fa-laptop"></i> Prize 9
+            </div>
+            <div
+              class="segment"
+              style="transform: rotate(324deg); background-color: #1d3557"
+            >
+              <i class="fas fa-key"></i> 1 License
+            </div>
+          </div>
+        </div>
+        <p>Spinning for your reward...</p>
+        <button class="play-button" id="play-button">Play</button>
+      </div>
+    </div>
+
+    <div class="spinner-modal-winner" id="spinner-modal-winner">
+      <div class="spinner-modal-winner-content">
+        <p class="winner-message">You have won 1 License!</p>
+        <button
+          id="firework-button"
+          class="play-button"
+          onclick="closeModals()"
+        >
+          Play to Earn
+        </button>
+        <div id="firework-container"></div>
       </div>
     </div>
 
