@@ -6,9 +6,20 @@ const images = [
   "image-4.jpg",
   "image-5.jpg",
 ];
+
+const items = [
+  "Headsets",
+  "synth",
+  "Acoustic Guitar",
+  "Microphone",
+  "Keyboard",
+];
 let currentIndex = 0;
 const currentImage = document.getElementById("current-image");
 const nextImage = document.getElementById("next-image");
+const nextItem = document.getElementById("next-item");
+let directory = "./assets/images/";
+var audio = document.getElementById("audioPlayer");
 
 // Function to generate a random amount between 100 and 999
 function getRandomAmount() {
@@ -26,7 +37,6 @@ function updateBalance(amount) {
 // Handle image rating
 function rateImage(rating) {
   console.log(`Rated as: ${rating}`);
-  let directory = "./assets/images/";
 
   // Update balance with a random amount
   const randomAmount = getRandomAmount();
@@ -34,9 +44,12 @@ function rateImage(rating) {
 
   currentImage.style.transform = "translateX(100%)";
   currentIndex = (currentIndex + 1) % images.length;
+  nextItem.innerText = items[currentIndex];
   nextImage.src = directory + images[currentIndex];
   nextImage.classList.remove("hidden");
   nextImage.style.transform = "translateX(-100%)";
+  audio.currentTime = 0;
+  audio.play();
 
   setTimeout(() => {
     nextImage.style.transform = "translateX(0)";
@@ -66,4 +79,6 @@ function showSection(section) {
 // Set the default active button on load
 document.addEventListener("DOMContentLoaded", () => {
   showSection("tasks");
+  currentImage.src = directory + images[currentIndex];
+  nextItem.innerText = items[currentIndex];
 });

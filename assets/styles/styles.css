@@ -101,6 +101,11 @@ section {
   transition: transform 1s;
 }
 
+.question {
+  font-family: "poppins";
+  font-size: 20px;
+}
+
 .hidden {
   display: none;
 }

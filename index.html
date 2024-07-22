@@ -34,17 +34,16 @@
     <section>
       <div class="container">
         <div class="image-viewport">
-          <img
-            id="current-image"
-            src="./assets/images/image-1.jpg"
-            alt="Current Image"
-          />
-          <img
-            id="next-image"
-            src="./assets/images/image-2.jpg"
-            alt="Next Image"
-            class="hidden"
-          />
+          <img id="current-image" alt="Current Image" />
+          <img id="next-image" alt="Next Image" class="hidden" />
+        </div>
+        <audio
+          id="audioPlayer"
+          src="./assets/audio/cash.mp3"
+          preload="auto"
+        ></audio>
+        <div class="question">
+          What would you rate <span class="question" id="next-item"></span>?
         </div>
         <div class="rating-buttons">
           <button onclick="rateImage('worst')" class="worst">
