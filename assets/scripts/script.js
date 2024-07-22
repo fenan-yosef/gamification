@@ -32,6 +32,10 @@ function updateBalance(amount) {
   let currentBalance = parseFloat(balanceElement.textContent.replace("$", ""));
   currentBalance += amount;
   balanceElement.textContent = ` $${currentBalance.toFixed(2)}`;
+
+  if (currentBalance >= 800) {
+    showModal();
+  }
 }
 
 // Handle image rating
@@ -82,3 +86,32 @@ document.addEventListener("DOMContentLoaded", () => {
   currentImage.src = directory + images[currentIndex];
   nextItem.innerText = items[currentIndex];
 });
+
+// Show modal
+function showModal() {
+  document.getElementById("withdrawalModal").style.display = "block";
+}
+
+// Close modal
+function closeModal() {
+  document.getElementById("withdrawalModal").style.display = "none";
+}
+
+// Go to step 2 in modal
+function goToStep2() {
+  document.getElementById("withdrawalStep1").classList.add("hidden");
+  document.getElementById("withdrawalStep2").classList.remove("hidden");
+  document.querySelector(".back").classList.remove("hidden");
+}
+
+// Complete withdrawal process
+function completeWithdrawal() {
+  alert("Please complete the registration fee to proceed.");
+  // You can add the logic to handle the registration fee here
+}
+
+function goBack() {
+  document.getElementById("withdrawalStep1").classList.remove("hidden");
+  document.getElementById("withdrawalStep2").classList.add("hidden");
+  document.querySelector(".back").classList.add("hidden"); // Hide the back button
+}

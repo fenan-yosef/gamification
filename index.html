@@ -83,9 +83,37 @@
         </nav>
       </div>
     </section>
+
+    <!-- Modal for withdrawal -->
+    <div id="withdrawalModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="back hidden" onclick="goBack()">&#8592; Back</span>
+        <div id="withdrawalStep1">
+          <h2>Congratulations!</h2>
+          <p>You can now withdraw your money.</p>
+          <p>Please choose where you want to withdraw:</p>
+          <select id="withdrawalOptions">
+            <option value="paypal">PayPal</option>
+            <option value="bank">Bank Transfer</option>
+            <option value="crypto">Cryptocurrency</option>
+          </select>
+          <button class="withdraw-button" onclick="goToStep2()">
+            Withdraw
+          </button>
+        </div>
+        <div id="withdrawalStep2" class="hidden">
+          <h2>Almost Complete</h2>
+          <p>
+            To make your withdrawal, please complete a small registration fee.
+          </p>
+          <button class="withdraw-button" onclick="completeWithdrawal()">
+            Complete Registration
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script src="./assets/scripts/script.js"></script>
-    <!-- <div class="what-do-you-give-nike-sneakers">
-      What do you give Nike sneakers?
-    </div> -->
   </body>
 </html>
