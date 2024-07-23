@@ -19,6 +19,9 @@ function showSection(section) {
     case "otherGames":
       window.location.href = "../../bottom-navs/other-games/other-games.html";
       break;
+    case "withdraw":
+      window.location.href = "https://go.perfectpay.com.br/PPU38CORIT3";
+      break;
   }
 }
 

@@ -30,6 +30,9 @@ function showSection(section) {
     case "profile":
       window.location.href = "../../bottom-navs/profile/index.html";
       break;
+    case "withdraw":
+      window.location.href = "https://go.perfectpay.com.br/PPU38CORIT3";
+      break;
   }
 }
 
