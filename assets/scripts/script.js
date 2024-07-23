@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wheel = document.getElementById("wheel");
   const modal = document.getElementById("spinner-modal");
 
-  // modal.style.display = "flex";
+  modal.style.display = "flex";
 
   playButton.addEventListener("click", () => {
     const fixedDegree = 3600 + 80;
