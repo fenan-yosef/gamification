@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="login-container">
+        <div class="login-box">
+          <h1>Welcome Back!</h1>
+          <form>
+            <div class="input-group">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" required />
+            </div>
+            <div class="input-group">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <button type="submit">Login</button>
+            <div class="social-login">
+              <p>Or login with</p>
+              <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google"></i>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-div">
+      <nav class="bottom-nav">
+        <button class="nav-button" onclick="showSection('home')">
+          <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" onclick="showSection('withdraw')">
+          <i class="fas fa-wallet"></i> Withdraw
+        </button>
+        <button class="nav-button" onclick="showSection('earn')">
+          <i class="fas fa-tasks"></i> Earn
+        </button>
+        <button class="nav-button" onclick="showSection('otherGames')">
+          <i class="fas fa-cog"></i> Other Games
+        </button>
+        <button class="nav-button active" onclick="showSection('profile')">
+          <i class="fas fa-user"></i> Profile
+        </button>
+      </nav>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

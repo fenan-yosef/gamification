@@ -75,21 +75,36 @@ function rateImage(rating) {
 
 // Handle section navigation
 function showSection(section) {
-  const buttons = document.querySelectorAll(".nav-button");
-  buttons.forEach((btn) => btn.classList.remove("active"));
+  try {
+    const buttons = document.querySelectorAll(".nav-button");
+    buttons.forEach((btn) => btn.classList.remove("active"));
 
-  const activeButton = Array.from(buttons).find(
-    (btn) => btn.textContent.trim().toLowerCase() === section
-  );
-  if (activeButton) {
-    activeButton.classList.add("active");
+    const activeButton = Array.from(buttons).find((btn) =>
+      btn.textContent.trim().toLowerCase().includes(section.toLowerCase())
+    );
+    if (activeButton) {
+      console.log("active button", activeButton);
+      activeButton.classList.add("active");
+    }
+    console.log(`Showing ${section} section`);
+
+    switch (section) {
+      case "otherGames":
+        window.location.href = "../../bottom-navs/other-games/other-games.html";
+        break;
+      case "profile":
+        window.location.href = "../../bottom-navs/profile/index.html";
+        break;
+      default:
+    }
+  } catch (error) {
+    console.log(error);
   }
-  console.log(`Showing ${section} section`);
 }
 
 // Set the default active button on load
 document.addEventListener("DOMContentLoaded", () => {
-  showSection("tasks");
+  showSection("earn");
   currentImage.src = directory + images[currentIndex];
   nextItem.innerText = items[currentIndex];
 
@@ -97,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wheel = document.getElementById("wheel");
   const modal = document.getElementById("spinner-modal");
 
-  modal.style.display = "flex";
+  // modal.style.display = "flex";
 
   playButton.addEventListener("click", () => {
     const fixedDegree = 3600 + 80;
@@ -152,38 +167,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-// to close all modals
-function closeModals() {
-  winner.style.display = "none";
-}
-
-// Show modal
-function showModal(currentBalance) {
-  document.getElementById("withdrawalModal").style.display = "block";
-  document.getElementById("money-amount").innerText = "$" + currentBalance;
-}
-
-// Close modal
-function closeModal() {
-  document.getElementById("withdrawalModal").style.display = "none";
-}
-
-// Go to step 2 in modal
-function goToStep2() {
-  document.getElementById("withdrawalStep1").classList.add("hidden");
-  document.getElementById("withdrawalStep2").classList.remove("hidden");
-  document.querySelector(".back").classList.remove("hidden");
-}
-
-// Complete withdrawal process
-function completeWithdrawal() {
-  alert("Please complete the registration fee to proceed.");
-  // You can add the logic to handle the registration fee here
-}
-
-function goBack() {
-  document.getElementById("withdrawalStep1").classList.remove("hidden");
-  document.getElementById("withdrawalStep2").classList.add("hidden");
-  document.querySelector(".back").classList.add("hidden"); // Hide the back button
-}

@@ -1,0 +1,150 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e0f7fa;
+  margin: 0;
+  height: 100vh;
+}
+
+.main-container {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: #1b8f9e;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #00acc1;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #107f8e;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #068191;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #056374;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #0b8596;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #066e81;
+}
+
+.social-login {
+  margin-top: 20px;
+}
+
+.social-login p {
+  margin: 0;
+  color: #777;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #0e94a6;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons i:hover {
+  color: #007c91;
+}
+
+/* bottom navbars */
+
+.navbar-div {
+  /* border: black solid; */
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #1b6b6c;
+  padding: 10px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-width: 700px;
+
+  position: fixed;
+  bottom: 0;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: rgb(214, 196, 196);
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nav-button i {
+  display: block;
+  font-size: 20px;
+}
+
+.nav-button.active {
+  font-weight: bold;
+  /* margin-bottom: 40px; */
+  padding: 5px;
+  background-color: #2a8397;
+  border-radius: 10px;
+  color: #000000;
+}

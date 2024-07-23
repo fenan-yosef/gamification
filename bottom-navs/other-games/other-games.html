@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game List</title>
+    <link rel="stylesheet" href="./otherGames.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Other Games</h1>
+    </header>
+    <div class="game-list" onclick="opengame('apple')" id="gameList">
+      <div class="game-item">
+        <img src="./apple.png" />
+        <h2>Apple collector</h2>
+        <p>Collect more apples and win real money</p>
+      </div>
+    </div>
+
+    <div class="navbar-div">
+      <nav class="bottom-nav">
+        <button class="nav-button" onclick="showSection('home')">
+          <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" onclick="showSection('withdraw')">
+          <i class="fas fa-wallet"></i> Withdraw
+        </button>
+        <button class="nav-button" onclick="showSection('earn')">
+          <i class="fas fa-tasks"></i> Earn
+        </button>
+        <button class="nav-button active" onclick="showSection('otherGames')">
+          <i class="fas fa-cog"></i> Other Games
+        </button>
+        <button class="nav-button" onclick="showSection('profile')">
+          <i class="fas fa-user"></i> Profile
+        </button>
+      </nav>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
