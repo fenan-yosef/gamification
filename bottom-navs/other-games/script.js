@@ -4,6 +4,8 @@ function opengame(game) {
     case "apple":
       window.location.href = "../../game-1/index.html";
       break;
+    case "tapper":
+      window.location.href = "../../game-2/index.html";
   }
 }
 

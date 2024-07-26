@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <link rel="stylesheet" href="./assets/styles/spinner.css" />
     <link rel="stylesheet" href="./assets/styles/withdraw-modals.css" />
+    <link rel="stylesheet" href="./assets/styles/warning-message-modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -27,7 +28,7 @@
         <div class="reward-div">
           <div class="reward-container">
             <i class="fa-solid fa-wallet fa-lg" style="color: #ffffff"></i>
-            <span id="balance"> $234.00</span>
+            <span id="balance"> $0.00</span>
           </div>
         </div>
       </nav>
@@ -211,18 +212,36 @@
 
     <div class="spinner-modal-winner" id="spinner-modal-winner">
       <div class="spinner-modal-winner-content">
+        <i class="fas fa-award fa-2xl" style="color: #fafcff"></i>
         <p class="winner-message">You have won 1 License!</p>
         <button
           id="firework-button"
           class="play-button"
           onclick="closeModals()"
         >
-          Play to Earn
+          Rate Products and Earn
         </button>
         <div id="firework-container"></div>
       </div>
     </div>
 
+    <!-- modal for withdraw error handler -->
+    <div class="withdraw-notification-modal" id="withdraw-notification-modal">
+      <div class="withdraw-notification-modal-content">
+        <i
+          class="fas fa-triangle-exclamation fa-2xl"
+          style="color: #fafcff"
+        ></i>
+        <p class="warning-message">Please rate atleast 5 products!</p>
+        <button
+          id="firework-button"
+          class="play-button"
+          onclick="closeModals()"
+        >
+          Rate Products and Earn
+        </button>
+      </div>
+    </div>
     <script src="./assets/scripts/script.js"></script>
     <script src="./assets/scripts/modals.js"></script>
   </body>

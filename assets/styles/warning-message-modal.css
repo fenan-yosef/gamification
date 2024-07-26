@@ -1,0 +1,23 @@
+.withdraw-notification-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.withdraw-notification-modal-content {
+  text-align: center;
+  font-family: "poppins";
+  background-color: #2a8397;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #ffffff;
+  width: 80%;
+  height: 200px;
+  border-radius: 10px;
+}

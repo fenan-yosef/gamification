@@ -1,12 +1,18 @@
+const modal = document.getElementById("spinner-modal");
+
 const video = document.getElementById("adVideo");
 const progressBar = document.getElementById("progress");
 const completeButton = document.getElementById("completeButton");
 const withdrawalStep2 = document.getElementById("withdrawalStep2");
 const videoContainer = document.getElementById("video-container");
+const loadingMessage = document.getElementById("loadingMessage");
+const warningMessage = document.getElementById("withdraw-notification-modal");
 
 // to close all modals
 function closeModals() {
   winner.style.display = "none";
+  modal.style.display = "none";
+  warningMessage.style.display = "none";
 }
 
 // Show modal
@@ -42,6 +48,7 @@ video.addEventListener("timeupdate", function () {
 });
 
 video.addEventListener("ended", function () {
+  loadingMessage.innerText = "Data loaded succefully, please proceed!";
   completeButton.classList.remove("hidden");
   completeButton.disabled = false;
   completeButton.scrollIntoView({

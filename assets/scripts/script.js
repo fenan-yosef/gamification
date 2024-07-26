@@ -5,14 +5,20 @@ const images = [
   "image-3.jpg",
   "image-4.jpg",
   "image-5.jpg",
+  "image-6.webp",
+  "image-7.webp",
+  "image-8.jpg",
 ];
 
 const items = [
   "Headsets",
-  "synth",
-  "Acoustic Guitar",
+  "Samsung galaxy S24 Ultra",
+  "Gaming Laptop",
   "Microphone",
-  "Keyboard",
+  "Apple watch ultra",
+  "Iphone 15 pro max",
+  "Nike shoes",
+  "Tesla Model Y",
 ];
 let currentIndex = 0;
 let counter = 0;
@@ -25,7 +31,7 @@ var audio = document.getElementById("audioPlayer");
 
 // Function to generate a random amount between 100 and 999
 function getRandomAmount() {
-  return Math.floor(Math.random() * 900) + 100;
+  return Math.floor(Math.random() * 90) + 10;
 }
 
 // Function to update the balance
@@ -35,14 +41,14 @@ function updateBalance(amount) {
   currentBalance += amount;
   balanceElement.textContent = ` $${currentBalance.toFixed(2)}`;
   counter += 1;
-  // if (currentBalance >= 800) {
-  //   showModal();
-  //   console.log(true);
-  // }
-
-  if (counter == 5) {
+  if (currentBalance >= 350) {
     showModal(currentBalance);
+    console.log(true);
   }
+
+  // if (counter == 5) {
+  //   showModal(currentBalance);
+  // }
 }
 
 // Handle image rating
@@ -76,6 +82,12 @@ function rateImage(rating) {
 // Handle section navigation
 function showSection(section) {
   try {
+    if (section == "withdraw" && counter < 5) {
+      document.getElementById("withdraw-notification-modal").style.display =
+        "flex";
+      return;
+    }
+
     const buttons = document.querySelectorAll(".nav-button");
     buttons.forEach((btn) => btn.classList.remove("active"));
 
@@ -121,21 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const fixedDegree = 3600 + 80;
 
     wheel.style.transform = `rotate(${fixedDegree}deg)`;
-    // Generate a random degree between 360 and 3600 (10 full rotations + random)
-    // const randomDegree = Math.floor(Math.random() * 360) + 3600;
-
-    // // Spin the wheel
-    // wheel.style.transform = `rotate(${randomDegree}deg)`;
-
-    // // Calculate the prize index (0-9)
-    // const prizeIndex = Math.floor((randomDegree % 360) / 36);
-
-    // // Display the winner after the spin animation completes
     setTimeout(() => {
       const prizeSegments = wheel.getElementsByClassName("segment");
       // const prize = prizeSegments[prizeIndex].textContent.trim();
       // alert(`Congratulations! You won: ${prize}`);
-      modal.style.display = "none";
+      // modal.style.display = "none";
       winner.style.display = "flex";
     }, 4000); // 4 seconds to match the CSS transition duration
   });
