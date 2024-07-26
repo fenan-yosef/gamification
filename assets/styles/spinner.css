@@ -16,10 +16,17 @@
 
 .spinner-modal-content,
 .spinner-modal-winner-content {
-  background-color: #fff;
-  padding: 20px;
+  border: white solid;
+  background-color: #1b6b6c;
+  padding: 60px;
   border-radius: 10px;
   text-align: center;
+}
+
+.spinner-message {
+  font-family: "poppins";
+  margin-top: 40px;
+  padding: 10px;
 }
 
 .wheel-container {
@@ -73,11 +80,12 @@
 .play-button {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #1b6b6c;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .play-button:hover {

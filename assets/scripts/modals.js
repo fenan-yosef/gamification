@@ -1,3 +1,9 @@
+const video = document.getElementById("adVideo");
+const progressBar = document.getElementById("progress");
+const completeButton = document.getElementById("completeButton");
+const withdrawalStep2 = document.getElementById("withdrawalStep2");
+const videoContainer = document.getElementById("video-container");
+
 // to close all modals
 function closeModals() {
   winner.style.display = "none";
@@ -18,8 +24,32 @@ function closeModal() {
 function goToStep2() {
   document.getElementById("withdrawalStep1").classList.add("hidden");
   document.getElementById("withdrawalStep2").classList.remove("hidden");
-  document.querySelector(".back").classList.remove("hidden");
+  // document.querySelector(".back").classList.remove("hidden");
+
+  videoContainer.classList.remove("hidden");
+  video.play();
 }
+
+video.addEventListener("timeupdate", function () {
+  completeButton.classList.add("hidden");
+  videoContainer.scrollIntoView({
+    behavior: "auto",
+    block: "center",
+    inline: "center",
+  });
+  const percentage = (video.currentTime / video.duration) * 100;
+  progressBar.style.width = percentage + "%";
+});
+
+video.addEventListener("ended", function () {
+  completeButton.classList.remove("hidden");
+  completeButton.disabled = false;
+  completeButton.scrollIntoView({
+    behavior: "auto",
+    block: "center",
+    inline: "center",
+  });
+});
 
 // Complete withdrawal process
 function completeWithdrawal() {

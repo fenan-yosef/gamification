@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.79a39171.css",
+    "main.js": "/static/js/main.d3853b59.js",
+    "static/js/787.e3bbf787.chunk.js": "/static/js/787.e3bbf787.chunk.js",
+    "static/media/bg1_rocket.png": "/static/media/bg1_rocket.1ac9c4c508af43c9719b.png",
+    "static/media/bg9_rocket.png": "/static/media/bg9_rocket.717b0f5d11315f2bea1f.png",
+    "static/media/bg2_rocket.png": "/static/media/bg2_rocket.f696efbc910abbd9f0fd.png",
+    "static/media/bg6_rocket.png": "/static/media/bg6_rocket.91b59536de844c6f3ed6.png",
+    "static/media/bg5_rocket.png": "/static/media/bg5_rocket.ae24fb14458e0fd7993f.png",
+    "static/media/bg4_rocket.png": "/static/media/bg4_rocket.79605cfe5e0e9b10227e.png",
+    "static/media/bg8_rocket.png": "/static/media/bg8_rocket.6464e316760464b269d1.png",
+    "static/media/avt1.png": "/static/media/avt1.15f613ebdac89b1c8e81.png",
+    "static/media/bg3_rocket.png": "/static/media/bg3_rocket.a3c6040f93f65b50dc74.png",
+    "static/media/bg7_rocket.png": "/static/media/bg7_rocket.648a4cdad4f281790c3a.png",
+    "static/media/trollface.gif": "/static/media/trollface.8b0d7d82232d31983cc8.gif",
+    "index.html": "/index.html",
+    "main.79a39171.css.map": "/static/css/main.79a39171.css.map",
+    "main.d3853b59.js.map": "/static/js/main.d3853b59.js.map",
+    "787.e3bbf787.chunk.js.map": "/static/js/787.e3bbf787.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79a39171.css",
+    "static/js/main.d3853b59.js"
+  ]
+}

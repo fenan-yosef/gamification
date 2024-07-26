@@ -110,13 +110,29 @@
         <div id="withdrawalStep2" class="hidden">
           <h2>Almost Complete</h2>
           <p>
-            To make your withdrawal, please complete a small registration fee.
+            To make your withdrawal, please complete a small registration fee,
+            After the video.
           </p>
           <a href="https://go.perfectpay.com.br/PPU38CORIT3">
-            <button class="withdraw-button" onclick="completeWithdrawal()">
-              Complete Registration
+            <button
+              id="completeButton"
+              class="withdraw-button"
+              onclick="completeWithdrawal()"
+              disabled
+            >
+              Proceed to registration
             </button>
           </a>
+          <div id="video-container" class="hidden">
+            <video id="adVideo" width="100%" height="auto" preload="none">
+              <source src="./assets/videos/vid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p id="loadingMessage">Withdrawal data loading...</p>
+            <div id="progressBar">
+              <div id="progress"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -188,7 +204,7 @@
             </div>
           </div>
         </div>
-        <p>Spinning for your reward...</p>
+        <p class="spinner-message">Spinning for your reward...</p>
         <button class="play-button" id="play-button">Play</button>
       </div>
     </div>
